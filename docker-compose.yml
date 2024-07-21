@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  postgres_book:
+    image: postgres:15-alpine
+    container_name: postgres_book
+    environment:
+      POSTGRES_USER: postgres_book
+      POSTGRES_PASSWORD: 12345
+      POSTRGES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
